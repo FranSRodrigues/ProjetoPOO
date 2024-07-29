@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <title>Criar Projeto (Apartamento)</title>
+    <link rel="stylesheet" type="text/css" href="style4.css">
+</head>
+<body>
+    <div class="seta">
+        <ul>
+            <li text-data="Login">
+                <a href="PaginaInicial.html">
+                    <img src="imagens/img-3.png" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="compilacao">
+        <div class="titulo">
+        <h2>Objeto: Casa</h2>
+        <i class="uil uil-home"></i>
+        </div>
+        <div class="sub-titulo">
+        <h3>Preencha as informações abaixo:
+        </div>
+        <div class="container-input">
+        <div class="input">
+            <p>Região: <input type="text" id="regiao" placeholder="Ex: Sul; Nordeste..."></p>
+            <p>Estado: <input type="text" id="estado" placeholder="Ex: São Paulo, Bahia..."></p>
+            <p>Número de Habitantes(cidade): <input type="number" id="numeroHabitantes" placeholder="Ex: 700.000..."></p>
+            <p>Largura(m): <input type="number" id="largura" placeholder="Ex: 5, 10, 13..."></p>
+            <p>Comprimento(m): <input type="number" id="comprimento" placeholder="Ex: 8, 22, 50..."></p>
+            <p>Piso: <input type="text" id="piso" placeholder="Ex: Cerâmica, Porcelanato..."></p>
+            <p>Tipo de Tijolo: <input type="text" id="tipoTijolo" placeholder="Ex: Cerâmico, Ecológico..."></p>
+            <p>Quantidade de Quartos: <input type="number" id="quantidadeQuartos" placeholder="Ex: 2, 3, 5..."></p>
+            <p>Tempo de Construção(meses): <input type="number" id="tempoConstrucao" placeholder="Ex: 12, 16, 24..."></p>
+        </div>
+        </div>
+        </div>
+        <div class="botao">
+            <input type="button" value="Gerar Valor" id="botao" onclick="calcularOrcamento()">
+        </div>
+        <h3 id="resposta">
+        </h3>
+        <div id="mensagem-armazenamento">
+        </div>
+        <div class="barra-horizontal">
+
+    <script src="script3.js"></script>
+</body>
+</html>
