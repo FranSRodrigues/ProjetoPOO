@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="style6.css">
+</script>
+
+</head>
+<body>
+
+    <form>
+        <div id="formulario">
+
+        <h1>Login de Usuário</h1> <hr>
+
+        <div>
+            <div><label>E-mail</label></div>
+            <input type="email" id="email" placeholder="any@gmail.com">
+        </div>
+
+        <div>
+            <div><label>Senha</label></div>
+            <input type="password" id="password" placeholder="Senha">
+        </div>
+        
+        <div>
+            <button type="button" id="entrar" onclick="logar()">Entrar</button>
+        </div>
+
+        <div id="divRegistrar">
+            <label id="naoConta">Ainda não tem conta?</label><button type="button" id="registrar" onclick="cadastrar()">Registre-se</button>
+        </div>
+    </div>
+    </form>
+</body>
+<script type="module" src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script src="script6.js"></script>
+</html>
