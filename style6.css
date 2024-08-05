@@ -2,23 +2,24 @@
 
 
 body{
-    background: rgb(225, 226, 228);
+    background: beige;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     font-family: 'poppins';
+    margin-top: 250px;
 }
 
 form {
-    width:30%;
+    width: 90%;
+    max-width: 400px;
 }
 
 input, button {
     padding: 7px;
     margin-bottom: 10px;
     margin-right: 6%;
-    margin-left: 5%;
+    margin-left: 5.5%;
 }
 
 input {
@@ -27,7 +28,7 @@ input {
     border-top-color: rgb(46, 41, 41)
 }
 
-button{
+button {
     cursor: pointer;
     width: 89%;
 }
@@ -37,9 +38,9 @@ button:active {
 }
 
 #entrar {
-    background: rgb(255, 72, 0);
+    background:rgb(255, 205, 134);
     border: none;
-    color: white;
+    color: black;
     margin-top: 8%;
 }
 
@@ -47,8 +48,8 @@ button:active {
     width: 20%;
     height: 55%;
     background: transparent;
-    color: black;
-    border: 1px solid black;
+    color: white;
+    border: 1px solid white;
     padding: 1px;
     margin-top: 5%;
     margin-left: 2%
@@ -59,7 +60,7 @@ h1 {
     justify-content: center;
     align-items: center;
     padding-top: 5%;
-    color: rgb(255, 72, 0)
+    color: rgb(245, 172, 69);
 }
 
 hr {
@@ -67,7 +68,7 @@ hr {
     margin-bottom: 15px;
     border-radius: 100%;
     width: 70%;
-    color: rgba(255, 72, 0, 0.479)
+    background-color: rgb(255, 205, 134);
 }
 
 label#naoConta {
@@ -75,6 +76,7 @@ label#naoConta {
     display: flex;
     align-items: center;
     padding-top: 5%;
+    color: white;
 }
 
 #divRegistrar {
@@ -83,18 +85,37 @@ label#naoConta {
     justify-content: end;
     margin-top: 8%;
     padding-bottom: 5%;
-    background-color: rgba(255, 72, 0, 0.479);
-    border-bottom-left-radius: 2%;
-    border-bottom-right-radius: 2%;
+    background-color: rgb(135, 77, 18);
+    border-radius: 5px;
 }
 
 #formulario {
     background: rgba(255, 231, 194, 0.637);
-    border-radius: 2%;
+    border-radius: 10px;
     border: 1px solid rgba(250, 133, 0, 0.267);
 }
 
 label {
-    margin-left: 5%;
+    margin-left: 22px;
     color: rgba(12, 12, 12, 0.788)
+}
+
+@media (max-width: 720px) {
+    h1 {
+        font-size: 26px;
+    }
+}
+
+.search {
+    display: flex;
+    align-items: center;    
+    justify-content: flex-end;
+}
+
+#olho {
+    cursor: pointer;
+    margin-right: 30px;
+    position: absolute;
+    width: 20px;
+    transform: translateY(-4px);
 }
