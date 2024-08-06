@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="Styles/style6.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+</script>
+
+</head>
+<body>
+
+    <form>
+        <div id="formulario">
+
+        <h1>Login de Usuário</h1> <hr>
+
+        <div>
+            <div><label>E-mail</label></div>
+            <input type="email" id="email" placeholder="any@gmail.com">
+        </div>
+
+        <div>
+            <div><label>Senha</label></div>
+            <div class="search">
+            <input type="password" id="password" placeholder="Senha">
+            <i class="uil uil-eye" id="olho"></i></div>
+        </div>
+        
+        <div>
+            <button type="button" id="entrar" onclick="login()">Entrar</button>
+        </div>
+
+        <div id="divRegistrar">
+            <label id="naoConta">Ainda não tem conta?</label><button type="button" id="registrar" onclick="cadastrar()">Registre-se</button>
+        </div>
+    </div>
+    </form>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="Scripts/script6.js"></script>
+</html>

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&display=swap');
+
+body{
+    font-family: 'poppins';
+    background: beige;
+}
+
+.titulo{
+    background-color: rgb(210, 200, 51);
+    border: 10px solid rgb(210, 200, 51);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.sub-titulo{
+    background-color: rgb(255, 232, 141);
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-input{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    margin-top: 40px;
+    line-height: 40px;
+    background: rgb(229, 155, 155);
+    border: 30px solid rgb(229, 155, 155);
+    border-radius: 30px;
+    box-shadow: 10px -10px rgb(98, 93, 93);
+}
+
+input {
+    border-width: 0;
+    outline: 0;
+    border-radius: 5px;
+}
+
+#botao{
+    font-size: 15px;
+}
+
+.botao{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.botao input{
+    background: rgb(240, 170, 71);
+    border-width: 0;
+    border-radius: 20px;
+    width: 180px;
+    height: 50px;
+}
+
+.botao input:hover{
+    background: rgb(205, 109, 19);
+    cursor: pointer;
+}

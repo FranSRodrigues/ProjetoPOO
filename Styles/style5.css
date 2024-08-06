@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+body{
+    background: beige;
+}
+
+.seta{
+    padding: 20px;
+}
+
+.seta ul li{
+    list-style: none;
+}
+
+.seta ul li a img{
+    max-width: 60px;
+    background: rgb(245, 165, 53);
+    border-radius: 30%;
+    border: 10px solid rgb(245, 165, 53);
+}
+
+.seta ul li a img:hover{
+    background: rgb(205, 109, 19);
+    border: 10px solid rgb(205, 109, 19);
+}
+
+header{
+    background:rgb(210, 200, 51);
+    padding: 10px;
+    color: black;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    padding: 30px 50px;
+}
+
+.lista-projetos h2{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(255, 232, 141);
+    border-radius: 20px;
+}
+
+.armazenar-botoes{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 20px;
+}
+
+.linhaInput{
+    display: grid;
+    margin-bottom: 10px;
+}
+
+input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: 0;
+}
+
+.botao1{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.botao2{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+button{
+    border: 0px;
+    padding: 10px 50px;
+    outline: 0;
+    background-color: rgb(240, 170, 71);
+    color: black;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+button:hover{
+    background-color: rgb(205, 109, 19);
+}
+
+.conteudo{
+    margin-top: 15px;
+}
+
+table{
+    border-collapse: collapse;
+    border: 1px solid #000000;
+    width: 100%;
+}
+
+table th{
+    background-color: rgb(229, 100, 100);
+}
+
+table th, td{
+    text-align: left;
+    padding: 1px 5px;
+}
+
+table td img{
+    width: 30px;
+    cursor: pointer;
+}
+
+.centro{
+    text-align: center;
+}
