@@ -1,7 +1,19 @@
-let resposta = document.getElementById('resposta');
-if(localStorage.arrayInformacoes){
-        resposta.innerHTML = localStorage.arrayInformacoes;
-    }
+function loading() {
+    const resposta = document.getElementById('resposta');
+    const array = JSON.parse(localStorage.getItem('arrayCasa')) || [];
+    let htmlContent = '';
+
+    array.forEach(item => {
+        htmlContent += `<p>${item}</p><br>`;
+    });
+
+    resposta.innerHTML = ''
+    resposta.innerHTML = htmlContent;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    loading();
+});
 
 function calcularOrcamento(){
     let contador = 0;
@@ -190,17 +202,18 @@ function calcularOrcamento(){
 
     var array = [];
 
-    if(localStorage.arrayInformacoes){
-        array = JSON.parse(localStorage.getItem('arrayInformacoes'))
+    if(localStorage.arrayCasa){
+        array = JSON.parse(localStorage.getItem('arrayCasa'))
     }
     
     array.push(mensagem);
 
     mensagem = '';
 
-    localStorage.arrayInformacoes = JSON.stringify(array);
+    localStorage.arrayCasa = JSON.stringify(array);
 
-    resposta.innerHTML = localStorage.arrayInformacoes;
+    resposta.innerHTML = localStorage.arrayCasa;
+    loading()
 
     let mensagemArmazenamento = document.getElementById("mensagem-armazenamento");
     let h4 = document.createElement("h4");
@@ -220,6 +233,6 @@ function calcularOrcamento(){
 }
 
 function limparInformacoes(){
-    localStorage.arrayInformacoes = '';
-    resposta.innerHTML = localStorage.arrayInformacoes;
+    localStorage.arrayCasa = '';
+    resposta.innerHTML = localStorage.arrayCasa;
 }
