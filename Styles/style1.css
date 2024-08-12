@@ -10,7 +10,7 @@
 
 body{
     min-height: 100vh;
-    background: url(imagens/img-2.jpg);
+    background-image: url(../Imagens/img-2.jpg);
     background-position: center;
     background-size: cover;
     overflow: hidden;

@@ -1,3 +1,8 @@
+let resposta = document.getElementById('resposta');
+if(localStorage.arrayInformacoes){
+        resposta.innerHTML = localStorage.arrayInformacoes;
+    }
+
 function calcularOrcamento(){
     let contador = 0;
     let preco = 0;
@@ -170,23 +175,37 @@ function calcularOrcamento(){
     }
     }
 
-    preco = contador * 125000;
+    preco = contador * 83334;
     let precoFinal = "R$" + preco + ",00";
 
-    if(preco == 3000000){
-        resposta.textContent = "O imóvel irá custar, aproximadamente, mais que : " + precoFinal;
+    let mensagem = '';
+
+    if(preco == 2000016){
+        mensagem = 'O imóvel irá custar, aproximadamente, mais que:' + precoFinal;
     }
 
-    else{resposta.textContent = "O imóvel irá custar, aproximadamente: " + precoFinal;}
+    else{
+        mensagem = 'O imóvel irá custar, aproximadamente:' + precoFinal;
+    }
+
+    var array = [];
+
+    if(localStorage.arrayInformacoes){
+        array = JSON.parse(localStorage.getItem('arrayInformacoes'))
+    }
     
+    array.push(mensagem);
+
+    mensagem = '';
+
+    localStorage.arrayInformacoes = JSON.stringify(array);
+
+    resposta.innerHTML = localStorage.arrayInformacoes;
+
     let mensagemArmazenamento = document.getElementById("mensagem-armazenamento");
-
     let h4 = document.createElement("h4");
-
     let texto = document.createTextNode("Pronto, agora você pode criar seu projeto!");
-
     mensagemArmazenamento.appendChild(h4);
-
     h4.appendChild(texto);
 
     inRegiao.value = "";
@@ -198,4 +217,9 @@ function calcularOrcamento(){
     inTipoTijolo.value = "";
     inQuantidadeQuartos.value = "";
     inTempoConstrucao.value = "";
+}
+
+function limparInformacoes(){
+    localStorage.arrayInformacoes = '';
+    resposta.innerHTML = localStorage.arrayInformacoes;
 }

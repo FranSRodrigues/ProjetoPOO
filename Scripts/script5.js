@@ -1,10 +1,10 @@
 class Projeto{
 
-    constructor(regiao, estado, numeroHabitantes, metroQuadrado, piso, tipoTijolo, quantidadeQuartos, tempoConstrucao,
+    constructor(cliente, regiao, estado, metroQuadrado, piso, tipoTijolo, quantidadeQuartos, tempoConstrucao,
         preco){
+        this.cliente = cliente;
         this.regiao = regiao;
         this.estado = estado;
-        this.numeroHabitantes = numeroHabitantes;
         this.metroQuadrado = metroQuadrado;
         this.piso = piso;
         this.tipoTijolo = tipoTijolo;
@@ -15,6 +15,14 @@ class Projeto{
         this.id = 1;
         this.arrayProjetos = [];
         this.edicaoId = null;
+    }
+
+    getCliente(){
+        return this.cliente;
+    }
+
+    setCliente(novoCliente){
+        this.cliente = novoCliente;
     }
 
     getRegiao(){
@@ -31,14 +39,6 @@ class Projeto{
 
     setEstado(novoEstado){
         this.estado = novoEstado;
-    }
-
-    getNumeroHabitantes(){
-        return this.numeroHabitantes;
-    }
-
-    setNumeroHabitantes(novoNumeroHabitantes){
-        this.numeroHabitantes = novoNumeroHabitantes;
     }
 
     getMetroQuadrado(){
@@ -90,8 +90,7 @@ class Projeto{
     }
 
     mostrarInformacoes(){
-        return `Região: ${this.regiao}\nEstado: ${this.estado}\nNúmero de Habitantes(cidade): 
-        ${this.numeroHabitantes}\nMetragem: ${this.metroQuadrado}\nPiso: ${this.piso}\nTipo de Tijolo:
+        return `Cliente:  ${this.numeroHabitantes}\nRegião: ${this.regiao}\nEstado: ${this.estado}\nMetragem: ${this.metroQuadrado}\nPiso: ${this.piso}\nTipo de Tijolo:
         ${this.tipoTijolo}\nQuantidade de Quartos: ${this.quantidadeQuartos}\nTempo de Construção: 
         ${this.tempoConstrucao}\nPreço: ${this.preco}`;
     }
@@ -120,9 +119,9 @@ class Projeto{
             let tr = tbody.insertRow();
  
             let tdId = tr.insertCell();
+            let tdCliente = tr.insertCell();
             let tdRegiao = tr.insertCell();
             let tdEstado= tr.insertCell();
-            let tdNumeroHabitantes = tr.insertCell();
             let tdMetroQuadrado = tr.insertCell();
             let tdPiso = tr.insertCell();
             let tdTipoTijolo = tr.insertCell();
@@ -132,9 +131,9 @@ class Projeto{
             let tdAcao = tr.insertCell();
 
             tdId.innerText = this.arrayProjetos[i].id;
+            tdCliente.innerText = this.arrayProjetos[i].cliente;
             tdRegiao.innerText = this.arrayProjetos[i].regiao;
             tdEstado.innerText = this.arrayProjetos[i].estado;
-            tdNumeroHabitantes.innerText = this.arrayProjetos[i].numeroHabitantes;
             tdMetroQuadrado.innerText = this.arrayProjetos[i].metroQuadrado;
             tdPiso.innerText = this.arrayProjetos[i].piso;
             tdTipoTijolo.innerText = this.arrayProjetos[i].tipoTijolo;
@@ -159,7 +158,6 @@ class Projeto{
     }
 
     adicionar(projeto){
-        projeto.numeroHabitantes = parseFloat(projeto.numeroHabitantes);
         projeto.metroQuadrado = parseFloat(projeto.metroQuadrado);
         projeto.quantidadeQuartos = parseFloat(projeto.quantidadeQuartos);
         projeto.tempoConstrucao = parseFloat(projeto.tempoConstrucao);
@@ -171,9 +169,9 @@ class Projeto{
     atualizar(id, projeto){
         for(let i = 0; i < this.arrayProjetos.length; i++){
             if(this.arrayProjetos[i].id == id){
+                this.arrayProjetos[i].cliente = projeto.cliente;
                 this.arrayProjetos[i].regiao = projeto.regiao;
                 this.arrayProjetos[i].estado = projeto.estado;
-                this.arrayProjetos[i].numeroHabitantes = projeto.numeroHabitantes;
                 this.arrayProjetos[i].metroQuadrado = projeto.metroQuadrado;
                 this.arrayProjetos[i].piso = projeto.piso;
                 this.arrayProjetos[i].tipoTijolo = projeto.tipoTijolo;
@@ -187,9 +185,9 @@ class Projeto{
     prepararEdicao(dados){
         this.edicaoId = dados.id;
 
+        document.getElementById('cliente').value = dados.cliente;
         document.getElementById('regiao').value = dados.regiao;
         document.getElementById('estado').value = dados.estado;
-        document.getElementById('numeroHabitantes').value = dados.numeroHabitantes;
         document.getElementById('metroQuadrado').value = dados.metroQuadrado;
         document.getElementById('piso').value = dados.piso;
         document.getElementById('tipoTijolo').value = dados.tipoTijolo;
@@ -203,10 +201,10 @@ class Projeto{
     lerDados(){
         let projeto = {};
 
+        projeto.cliente = document.getElementById('cliente').value;
         projeto.id = this.id;
         projeto.regiao = document.getElementById('regiao').value;
         projeto.estado = document.getElementById('estado').value;
-        projeto.numeroHabitantes = document.getElementById('numeroHabitantes').value;
         projeto.metroQuadrado = document.getElementById('metroQuadrado').value;
         projeto.piso = document.getElementById('piso').value;
         projeto.tipoTijolo = document.getElementById('tipoTijolo').value;
@@ -220,7 +218,7 @@ class Projeto{
     validarCampos(projeto){
         let mensagem = ''
 
-        if(projeto.regiao == '' || projeto.estado == '' ||  projeto.numeroHabitantes == '' || projeto.metroQuadrado == ''
+        if(projeto.cliente == '' || projeto.regiao == '' || projeto.estado == '' || projeto.metroQuadrado == ''
             || projeto.piso == '' || projeto.tipoTijolo == '' || projeto.quantidadeQuartos == '' || projeto.tempoConstrucao
             == '' || projeto.preco == ''){
                 mensagem = 'Preencha todos os campos!'
@@ -235,9 +233,9 @@ class Projeto{
     }
 
     cancelar(){
+        document.getElementById('cliente').value = '';
         document.getElementById('regiao').value = '';
         document.getElementById('estado').value = '';
-        document.getElementById('numeroHabitantes').value = '';
         document.getElementById('metroQuadrado').value = '';
         document.getElementById('piso').value = '';
         document.getElementById('tipoTijolo').value = '';

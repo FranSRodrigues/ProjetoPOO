@@ -32,8 +32,8 @@ body{
 }
 
 .titulo{
-    background-color: rgb(210, 200, 51);
-    border: 10px solid rgb(210, 200, 51);
+    background-color: rgb(245, 165, 53);
+    border: 10px solid rgb(245, 165, 53);
     align-items: center;
     justify-content: center;
     display: flex;
@@ -73,14 +73,14 @@ body{
     outline: 0;
 }
 
-.botao{
+.adicionar{
     display: flex;
     text-align: center;
     justify-content: center;
     margin-top: 10px;
 }
 
-.botao input{
+.adicionar input{
     background: rgb(240, 170, 71);
     border-width: 0;
     border-radius: 20px;
@@ -88,13 +88,13 @@ body{
     height: 50px;
 }
 
-.botao input:hover{
+.adicionar input:hover{
     background: rgb(205, 109, 19);
     cursor: pointer;
 }
 
 .barra-horizontal{
-    background-color: rgb(210, 200, 51);
+    background-color: rgba(255, 231, 194, 0.637);
     width: 1350px;
     height: 120px;
     margin-top: 20px;
@@ -139,4 +139,24 @@ body{
     border-radius: 20px;
     width: 400px;
     height: 30px;
+}
+
+.limpar{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.limpar input{
+    background: rgb(240, 170, 71);
+    border-width: 0;
+    border-radius: 20px;
+    width: 180px;
+    height: 50px;
+}
+
+.limpar input:hover{
+    background: rgb(205, 109, 19);
+    cursor: pointer;
 }

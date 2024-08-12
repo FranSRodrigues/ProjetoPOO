@@ -3,11 +3,34 @@
 
 body{
     background: beige;
+    font-family: 'poppins';
+    margin-top: 0;
+}
+
+nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'poppins';
-    margin-top: 250px;
+}
+
+.seta{
+    padding: 20px;
+}
+
+.seta ul li{
+    list-style: none;
+}
+
+.seta ul li a img{
+    max-width: 40px;
+    background: rgb(245, 165, 53);
+    border-radius: 30%;
+    border: 10px solid rgb(245, 165, 53);
+}
+
+.seta ul li a img:hover{
+    background: rgb(205, 109, 19);
+    border: 10px solid rgb(205, 109, 19);
 }
 
 form {
@@ -44,12 +67,16 @@ button:active {
     margin-top: 8%;
 }
 
+#entrar:hover{
+    background-color: rgb(205, 109, 19);
+}
+
 #registrar {
     width: 20%;
     height: 55%;
     background: transparent;
-    color: white;
-    border: 1px solid white;
+    color: black;
+    border: 1px solid black;
     padding: 1px;
     margin-top: 5%;
     margin-left: 2%
@@ -60,7 +87,7 @@ h1 {
     justify-content: center;
     align-items: center;
     padding-top: 5%;
-    color: rgb(245, 172, 69);
+    color: rgb(205, 109, 19);
 }
 
 hr {
@@ -76,7 +103,7 @@ label#naoConta {
     display: flex;
     align-items: center;
     padding-top: 5%;
-    color: white;
+    color: black;
 }
 
 #divRegistrar {
@@ -85,7 +112,7 @@ label#naoConta {
     justify-content: end;
     margin-top: 8%;
     padding-bottom: 5%;
-    background-color: rgb(135, 77, 18);
+    background-color: rgb(245, 165, 53);
     border-radius: 5px;
 }
 
@@ -112,7 +139,7 @@ label {
     justify-content: flex-end;
 }
 
-#olho {
+#olho{
     cursor: pointer;
     margin-right: 30px;
     position: absolute;

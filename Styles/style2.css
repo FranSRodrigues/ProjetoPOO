@@ -160,7 +160,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:bisque;
+    background-color:rgba(255, 231, 194, 0.637);
 }
 
 a{
@@ -168,29 +168,29 @@ a{
 }
 
 .casa p{
-    background:#eed579;
+    background:rgb(205, 109, 19);
     margin: 40px;
-    border: 13px solid #eed579;
-    color: black;
+    border: 13px solid rgb(205, 109, 19);
+    color: white;
     border-radius: 20px;
 }
 
 .apartamento p{
-    background:#eed579;
+    background:rgb(205, 109, 19);
     margin: 40px;
-    border: 13px solid #eed579;
-    color: black;
+    border: 13px solid rgb(205, 109, 19);
+    color: white;
     border-radius: 20px;
 }
 
 .casa p:hover{
-    background:#877120;
+    background:rgb(135, 77, 18);
     color: white;
-    border: 13px solid #877120;
+    border: 13px solid rgb(135, 77, 18);
 }
 
 .apartamento p:hover{
-    background:#877120;
+    background:rgb(135, 77, 18);
     color: white;
-    border: 13px solid #877120;
+    border: 13px solid rgb(135, 77, 18);
 }

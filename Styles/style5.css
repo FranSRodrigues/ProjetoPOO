@@ -32,7 +32,7 @@ body{
 }
 
 header{
-    background:rgb(210, 200, 51);
+    background:rgba(255, 205, 134, 0.838);
     padding: 10px;
     color: black;
     text-align: center;
@@ -50,7 +50,7 @@ main{
     text-align: center;
     align-items: center;
     flex-direction: column;
-    background: rgb(255, 232, 141);
+    background: rgb(245, 165, 53);
     border-radius: 20px;
 }
 

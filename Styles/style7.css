@@ -1,13 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&display=swap');
 
 body{
-    font-family: 'poppins';
     background: beige;
+    font-family: 'poppins';
+}
+
+.seta{
+    padding: 20px;
+}
+
+.seta ul li{
+    list-style: none;
+}
+
+.seta ul li a img{
+    max-width: 40px;
+    background: rgb(245, 165, 53);
+    border-radius: 30%;
+    border: 10px solid rgb(245, 165, 53);
+}
+
+.seta ul li a img:hover{
+    background: rgb(205, 109, 19);
+    border: 10px solid rgb(205, 109, 19);
 }
 
 .titulo{
-    background-color: rgb(210, 200, 51);
-    border: 10px solid rgb(210, 200, 51);
+    background-color: rgb(245, 165, 53);
+    border: 10px solid rgb(245, 165, 53);
     align-items: center;
     justify-content: center;
     display: flex;
@@ -69,4 +89,15 @@ input {
 .botao input:hover{
     background: rgb(205, 109, 19);
     cursor: pointer;
+}
+
+#mensagem-armazenamento h4{
+    background: rgb(229, 100, 100);
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 550px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
