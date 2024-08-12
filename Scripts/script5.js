@@ -1,4 +1,4 @@
-class Projeto{
+class Imovel{
 
     constructor(cliente, regiao, estado, metroQuadrado, piso, tipoTijolo, quantidadeQuartos, tempoConstrucao,
         preco){
@@ -262,4 +262,4 @@ class Projeto{
 }
 }
 
-let projeto = new Projeto;
+let projeto = new Imovel;
